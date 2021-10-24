@@ -24,7 +24,7 @@ const theme = {
 		text: 'white',
 		background: '#080808',
 	},
-	spacing: 40,
+	spacing: 64,
 }
 
 const generateSocialPreview = async ({ title, hub }) => {
@@ -43,7 +43,7 @@ const generateSocialPreview = async ({ title, hub }) => {
 	// Logo
 	logo.width = logo.width / 1.5
 	logo.height = logo.height / 1.5
-	ctx.drawImage(logo, canvas.width - 40 - logo.width, 40)
+	ctx.drawImage(logo, canvas.width - theme.spacing - logo.width, theme.spacing - 28)
 
 	// Header Title
 	ctx.fillStyle = theme.colors.text

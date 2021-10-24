@@ -46,13 +46,13 @@ export const wrapText = ({
 		}
 	}
 
-	y = y - (lines.length * lineHeight) / 2 + 32
+	y = y - (lines.length * lineHeight) / 2 + 40
 	lines.forEach((e, i) => {
 		const width = context.measureText(e)
 		context.fillStyle = backgroundColor
-		context.fillRect(x - 16, y + 8 - lineHeight, width.width + 24, lineHeight + 16)
+		context.fillRect(x, y + 8 - lineHeight, width.width + 24, lineHeight + 16)
 		context.fillStyle = textColor
-		context.fillText(e, x, i != 0 ? y - 8 : y)
+		context.fillText(e, x + 16, i != 0 ? y - 8 : y)
 		y += lineHeight + 16
 	})
 }
