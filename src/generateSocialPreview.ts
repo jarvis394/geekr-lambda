@@ -32,8 +32,8 @@ const generateSocialPreview = async ({ title, hub }) => {
 	const ctx = canvas.getContext('2d')
 
 	// Load images
-	const logo = await loadImage(path.join(__dirname, 'resources/habra_logo.svg'))
-	const background = await loadImage(path.join(__dirname, 'resources/background.svg'))
+	const logo = await loadImage(path.join(__dirname, 'pages/api/resources/habra_logo.svg'))
+	const background = await loadImage(path.join(__dirname, 'pages/api/resources/background.svg'))
 
 	// Background
 	ctx.fillStyle = theme.colors.background
