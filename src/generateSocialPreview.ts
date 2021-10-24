@@ -1,5 +1,6 @@
 import { createCanvas, loadImage } from 'canvas'
 import { wrapText } from 'src/canvasHelpers'
+import path from 'path'
 
 const fontFamily = 'Google Sans'
 const fontSizes = {
@@ -31,8 +32,8 @@ const generateSocialPreview = async ({ title, hub }) => {
 	const ctx = canvas.getContext('2d')
 
 	// Load images
-	const logo = await loadImage('public/habra_logo.svg')
-	const background = await loadImage('public/background.svg')
+	const logo = await loadImage(path.join(__dirname, 'resources/habra_logo.svg'))
+	const background = await loadImage(path.join(__dirname, 'resources/background.svg'))
 
 	// Background
 	ctx.fillStyle = theme.colors.background

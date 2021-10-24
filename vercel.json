@@ -1,7 +1,7 @@
 {
 	"functions": {
 		"pages/api/share.ts": {
-			"includeFiles": "public/**"
+			"includeFiles": "resources/**"
 		}
 	}
 }

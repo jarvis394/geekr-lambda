@@ -14,7 +14,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		})
 
 	try {
-		registerFont('public/GoogleSans-Bold.ttf', {
+		registerFont(path.join(__dirname, 'resources/GoogleSans-Bold.ttf'), {
 			family: 'Google Sans',
 			weight: 'bold',
 		})
