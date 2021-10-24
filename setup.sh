@@ -4,4 +4,6 @@ cd zlib-1.2.9
 sh configure
 make
 ls -l libz*
-cp libz.so.1 ../node_modules/canvas/build/Release/
+cp libz.so.1 ./node_modules/canvas/build/Release/
+pwd
+cd ./node_modules/canvas && npm install --build-from-source
