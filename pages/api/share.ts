@@ -1,5 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import generateSocialPreview from 'src/generateSocialPreview'
+import { registerFont } from 'canvas'
+import path from 'path'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -12,6 +14,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		})
 
 	try {
+		registerFont(path.join(__dirname, 'resources', 'GoogleSans-Bold.ttf'), {
+			family: 'Google Sans',
+			weight: 'bold',
+		})
 		const coverStream = await generateSocialPreview({
 			title,
 			hub,
