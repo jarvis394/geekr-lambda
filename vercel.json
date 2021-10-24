@@ -1,6 +1,6 @@
 {
 	"functions": {
-		"api/share": {
+		"api/share.ts": {
 			"includeFiles": "resources/**"
 		}
 	}
