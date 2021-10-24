@@ -14,6 +14,13 @@ const Home: NextPage = () => {
 					This is a serverless backend for a project called {"'geekr'"}. Github repo:{' '}
 					<a href='https://github.com/jarvis394/geekr'>click</a>
 				</p>
+				<h2>API (/api)</h2>
+				<ul>
+					<li>
+						<i>/share?title={'{TITLE}'}&hub={'{HUB}'}</i>
+						<p>Generates social preview image</p>
+					</li>
+				</ul>
 			</div>
 		</>
 	)
