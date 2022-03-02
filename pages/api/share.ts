@@ -3,7 +3,6 @@ import generateSocialPreview from 'src/generateSocialPreview'
 import { registerFont } from 'canvas'
 import path from 'path'
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default async (req: NextApiRequest, res: NextApiResponse) => {
 	const { title, hub } = req.query
 	if (!title || !hub)
