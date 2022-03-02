@@ -5,7 +5,7 @@ import path from 'path'
 import cors from 'src/cors'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-	cors(req, res)
+	await cors(req, res)
 
 	const { title, hub } = req.query
 	if (!title || !hub)

@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import cors from 'src/cors'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-	cors(req, res)
+	await cors(req, res)
 	
 	if (req.method === 'POST') {
 		const csrfToken = await getCSRFToken(req.body)
