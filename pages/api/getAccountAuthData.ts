@@ -1,7 +1,10 @@
 import { getAccountAuthData } from 'habra-auth'
 import { NextApiRequest, NextApiResponse } from 'next'
+import cors from 'src/cors'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  cors(req, res)
+  
 	if (req.method === 'POST') {
 		const data = await getAccountAuthData(req.body)
 		res.status(data?.error ? 403 : 200).json(data)

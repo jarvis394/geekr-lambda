@@ -2,8 +2,11 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import generateSocialPreview from 'src/generateSocialPreview'
 import { registerFont } from 'canvas'
 import path from 'path'
+import cors from 'src/cors'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+	cors(req, res)
+
 	const { title, hub } = req.query
 	if (!title || !hub)
 		return res.status(400).json({
