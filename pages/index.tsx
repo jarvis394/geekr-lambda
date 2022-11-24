@@ -17,8 +17,14 @@ const Home: NextPage = () => {
 				<h2>API (/api)</h2>
 				<ul>
 					<li>
-						<i>/share?title={'{TITLE}'}&hub={'{HUB}'}</i>
+						<i>
+							/share?title={'{TITLE}'}&hub={'{HUB}'}
+						</i>
 						<p>Generates social preview image</p>
+					</li>
+					<li>
+						<i>/share?id={'{ID}'}</i>
+						<p>Generates social preview image by article ID</p>
 					</li>
 				</ul>
 			</div>
